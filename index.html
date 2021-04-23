@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- 
+  Author:   Robert Zaranek
+  Date:     April 15, 2021
+
+  Purpose:  The HTML portion of the "Red Light, Green Light" application.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src='js/jquery-3.5.1.min.js'></script>
+    <script
+        src="https://www.bing.com/api/maps/mapcontrol?key=BingAPIkey&callback=loadMapScenario"
+        async defer></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg-6 col-12">
+                <h3 style="font-style: italic;">
+                    <span style="color: crimson;">Red Light,</span>
+                    <span style="color: green;"> Green Light</span>
+                </h3>
+                <div id="myMap"></div>
+                <div class="mt-2" id="closest_red_light_panel">
+                    <p id="closest_red_light">No Red Light Locations Found</p>
+                </div>
+                <button type="button" id="update_current_location_button"
+                    class="btn btn-warning btn-lg btn-block mt-2">Update Current Location</button>
+            </div>
+            <div class="col-lg col-12 mt-5">
+                <form id="new_location_form" autocomplete="off">
+                    <h5>New Hazard/Warning</h5>
+                    <div class="form-group" id="location_input_container">
+                        <label for="location_input">Location:</label>
+                        <input type="search" class="form-control" id="location_input">
+                    </div>
+                    <div class="form-group">
+                        <label for="description_input">Description:</label>
+                        <textarea class="form-control" id="description_input" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Add Location</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

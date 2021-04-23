@@ -1,0 +1,41 @@
+/*
+  Author:   Robert Zaranek
+  Date:     April 15, 2021
+
+  Purpose:  The CSS styling for the "Red Light, Green Light" application.
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+#closest_red_light_panel {
+    border: 1px solid black;
+    background-color: white;
+}
+
+#closest_red_light {
+    margin: 5px;
+}
+
+#myMap {
+    height: 500px;
+    border: 1px solid black;
+}
+
+.infobox-actions {
+    height: 30px !important;
+}
+
+#as_containerSearch {
+    width: 250px;
+}
+
+#location_input {
+    box-sizing: border-box !important;
+}
